@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-massiveprince-bucket"
-  acl    = "private"
+# resource "aws_s3_bucket" "b" {
+#   bucket = "my-tf-massiveprince-bucket"
+#   acl    = "private"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
+#   tags = {
+#     Name        = "My bucket"
+#     Environment = "Dev"
+#   }
+# }
