@@ -9,5 +9,5 @@ variable "region" {
   }
 
 variable "image" {
-  default = "ami-042e8287309f5df03"
+  default = "ami-048f6ed62451373d9"
 }
