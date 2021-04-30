@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: 'cde06f21-9ae7-4081-a549-f7bdb515dc6f', url: 'https://github.com/parasgarg11/terraform-project1.git'
+                git branch: 'main', credentialsId: 'github_for_terraform', url: 'https://github.com/parasgarg11/terraform-jenkins-pipeline.git'
             }
         }
         stage ("terraform init") {
@@ -27,12 +27,12 @@ pipeline {
         }
         stage ("terrafrom plan") {
             steps {
-                sh 'terraform plan '
+                sh 'terraform plan -out myplan'
             }
         }
         stage ("terraform apply") {
             steps {
-                sh 'terraform apply --auto-approve'
+                sh 'terraform apply --auto-approve myplan'
             }
         }
     }
