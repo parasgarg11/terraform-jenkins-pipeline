@@ -6,3 +6,4 @@ resource "aws_instance" "web-server-instance" {
   tags = {
     Name = "web-server"
   }
+}
